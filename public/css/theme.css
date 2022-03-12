@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.bg-light{
+    background: rgba(204,202,186,1);
+background: -moz-linear-gradient(left, rgba(204,202,186,1) 0%, rgba(193,129,209,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(204,202,186,1)), color-stop(100%, rgba(193,129,209,1)));
+background: -webkit-linear-gradient(left, rgba(204,202,186,1) 0%, rgba(193,129,209,1) 100%);
+background: -o-linear-gradient(left, rgba(204,202,186,1) 0%, rgba(193,129,209,1) 100%);
+background: -ms-linear-gradient(left, rgba(204,202,186,1) 0%, rgba(193,129,209,1) 100%);
+background: linear-gradient(to right, rgba(204,202,186,1) 0%, rgba(193,129,209,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccaba', endColorstr='#c181d1', GradientType=1 );
+    -webkit-box-shadow: -1px 21px 10px -1px rgba(0,0,0,0.9);
+-moz-box-shadow: -1px 11px 10px -1px rgba(0,0,0,0.9);
+box-shadow: -1px 11px 10px -1px rgba(0,0,0,0.9);
+}
+
+.navbar-brand{
+    font-family: cursive;
+    color: maroon;
+    text-shadow: 1px 1px blue;
+}
+
+.nav-link{
+    font-family: 'Times New Roman', Times, serif;
+    color:Red
+}
+
+.nav-link:hover {
+    color:blueviolet
+}
+
+body {
+    background: url(https://wallpaperaccess.com/full/84248.png);
+}
+
+.btn-primary{
+    color: blue;
+    -webkit-box-shadow: 10px 15px 15px 0px rgba(0,0,0,0.58);
+    -moz-box-shadow: 10px 15px 15px 0px rgba(0,0,0,0.58);
+    box-shadow: 10px 15px 15px 0px rgba(0,0,0,0.58);
+}
+
+.btn-primary:hover{
+    color: pink;  
+    -webkit-box-shadow: 2px 4px 43px 25px rgba(0,0,0,0.58);
+    -moz-box-shadow: 2px 4px 43px 25px rgba(0,0,0,0.58);
+    box-shadow: 2px 4px 43px 25px rgba(0,0,0,0.58);
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
+.container :is(h1, h2, h3, h4, h5, h6)
+{
+    color: darkgrey;
+    font-family: vietnamese ;
+    text-shadow: 2px 2px black;
+}
+
+a{
+    color: darkgray;
+}
+
+legend{
+    font-family: cursive;
+    color: darkmagenta;
+}
