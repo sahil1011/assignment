@@ -1,4 +1,5 @@
 const { Console } = require('console');
+const { resolve } = require('path');
 
 class Data {
     constructor(student, course) {
@@ -37,13 +38,20 @@ var getStudentsByCourse = (course) => {
 }
 var getStudentByNum = (num) => {
     return new Promise((resolve, reject) => {
-        studentsList = dataCollection.students.filter(student => student.studentNum == num);
-        console.log(studentsList.length);
-        if (studentsList.length > 0) {
-            resolve(studentsList);
+        student = dataCollection.students.find(student => student.studentNum == num);
+        if (student) {
+            resolve(student);
         } else {
             reject("no results returned");
         }
+    });
+}
+
+var updateStudent = (student) =>{
+    return new Promise((resolve, reject) => {
+    dataCollection.students[
+        dataCollection.students.findIndex((studentA) => studentA.id === student.id)]=student;
+        resolve();
     });
 }
 
@@ -62,6 +70,16 @@ var getCourses = () => {
         }
         reject("Unable to access list of courses ,no results returned");
     });
+}
+var getCourseById = (id) => {
+    course = dataCollection.courses.find(course => course.courseId == id);
+    return new Promise((resolve, reject) => {
+        if (course) {
+            resolve(course);
+        }
+        reject("query returned 0 results");
+    });
+
 }
 var getTAs = () => {
     return new Promise((resolve, reject) => {
@@ -85,4 +103,4 @@ var addStudent = (studentData) => {
     });
 }
 module.exports = { initalize, getAllStudents, getTAs, 
-    getCourses, getStudentsByCourse, getStudentByNum,addStudent};
+    getCourses, getStudentsByCourse, getStudentByNum,addStudent,getCourseById,updateStudent};
