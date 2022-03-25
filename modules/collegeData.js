@@ -48,9 +48,10 @@ var getStudentByNum = (num) => {
 }
 
 var updateStudent = (student) =>{
+
     return new Promise((resolve, reject) => {
-    dataCollection.students[
-        dataCollection.students.findIndex((studentA) => studentA.studentNum === student.studentNum)]=student;
+        index = dataCollection.students.findIndex((studentA) => studentA.studentNum == student.studentNum);
+        dataCollection.students[index]=student;
         resolve();
     });
 }
