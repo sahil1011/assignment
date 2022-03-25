@@ -50,7 +50,7 @@ var getStudentByNum = (num) => {
 var updateStudent = (student) =>{
     return new Promise((resolve, reject) => {
     dataCollection.students[
-        dataCollection.students.findIndex((studentA) => studentA.id === student.id)]=student;
+        dataCollection.students.findIndex((studentA) => studentA.studentNum === student.studentNum)]=student;
         resolve();
     });
 }
