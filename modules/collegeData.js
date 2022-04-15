@@ -100,7 +100,7 @@ var addStudent = (studentData) => {
 var updateStudent = (studentData) => {
     return new Promise(
         (resolve, reject) => {
-            Student.update(checkData(studentData), { where: studentNum = studentData.studentNum })
+            Student.update(checkData(studentData), { where: {studentNum : studentData.studentNum }})
                 .then((studentData) => resolve("success!"))
                 .catch((error) => reject("unable to update student"))
         })
